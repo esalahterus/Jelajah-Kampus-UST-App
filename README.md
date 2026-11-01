@@ -1,10 +1,10 @@
-# Jelajah Kampus UST
+# Jelajah Kampus UST App
 
-Aplikasi eksplorasi kampus berbasis Android (Java) dengan backend PHP/MySQL (Laragon) dan peta OpenStreetMap (osmdroid).
+Aplikasi eksplorasi kampus UST berbasis Android (Java) dengan backend PHP/MySQL (Laragon) dan peta OpenStreetMap (osmdroid).
 
 ```
 Jelajah-Kampus-UST-App/
-├── jelajah-kampus-ust/   -> salin ke C:\laragon\www\jelajah_api\
+├── jelajah-kampus-ust/   -> salin ke Drive Anda\laragon\www\ atau ke htdocs jika menggunakan XAMPP
 │   ├── database.sql        skema + data awal (11 tabel, + kolom api_token)
 │   ├── config.php          koneksi DB (default Laragon: root, tanpa password)
 │   ├── helpers.php         respons JSON, autentikasi token, Haversine
@@ -14,9 +14,9 @@ Jelajah-Kampus-UST-App/
 └── JelajahKampusUST/   -> buka folder ini di Android Studio
 ```
 
-## 1. Menjalankan backend (Laragon)
+## 1. Menjalankan backend (Laragon atau XAMPP)
 
-1. Salin folder `backend` ke `C:\laragon\www\`.
+1. Salin folder `jelajah-kampus-ust` ke `..\laragon\www\` atau ke `..\htdocs\` jika menggunakan XAMPP.
 2. Jalankan Laragon, klik **Start All** (Apache + MySQL).
 3. Impor `database.sql` (phpMyAdmin). Database `jelajah_kampus_ust` akan dibuat otomatis.
 4. Jika MySQL Anda memakai password, ubah `DB_PASS` di `config.php`.
@@ -29,7 +29,7 @@ Jelajah-Kampus-UST-App/
 
 ## 2. Menjalankan aplikasi Android
 
-1. Android Studio: **Open** folder `android` (tunggu Gradle Sync).
+1. Android Studio: **Open** folder `JelajahKampusUST` (tunggu Gradle Sync).
 2. Buka `Config.java` dan sesuaikan `BASE_URL`:
    - Emulator: `http://10.0.2.2/jelajah-kampus-ust/` (default di build.gradle.kts: Module :app)
    - HP fisik: `http://IP_LAPTOP/jelajah-kampus-ust/` (satu Wi-Fi)
