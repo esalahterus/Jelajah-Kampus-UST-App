@@ -16,17 +16,11 @@ public final class Config {
 
     public static final String API = BASE_URL + "api/";
 
-    /**
-     * Build debug memakai Laragon atau IP komputer lokal.
-     * Android API 37 harus meminta izin jaringan lokal untuk kasus ini.
-     */
     public static boolean usesLocalBackend() {
         return BuildConfig.DEBUG;
     }
 
-    /** Interval kirim lokasi peserta ke server, dalam milidetik. */
     public static final long TRACKING_MIN_INTERVAL_MS = 5000;
 
-    /** Interval pembaruan posisi peserta lain di peta, dalam milidetik. */
     public static final long PARTICIPANT_REFRESH_MS = 5000;
 }
