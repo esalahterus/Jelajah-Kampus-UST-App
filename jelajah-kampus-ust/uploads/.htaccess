@@ -1,0 +1,6 @@
+# Folder upload: jangan pernah menjalankan skrip di sini.
+RemoveHandler .php .phtml .php3 .php4 .php5 .phps
+Options -ExecCGI -Indexes
+<FilesMatch "\.(php|phtml|phar)$">
+    Require all denied
+</FilesMatch>

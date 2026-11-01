@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1B5E20</color>
+    <color name="primary_light">#E3F1E4</color>
+    <color name="accent">#F9A825</color>
+    <color name="bg">#F4F6F4</color>
+    <color name="text_main">#1C241C</color>
+    <color name="text_muted">#5E6B60</color>
+    <color name="st_not_started">#78909C</color>
+    <color name="st_in_progress">#1565C0</color>
+    <color name="st_pending">#EF6C00</color>
+    <color name="st_rejected">#C62828</color>
+    <color name="st_completed">#2E7D32</color>
+    <color name="p_active">#2E7D32</color>
+    <color name="p_inactive">#9E9E9E</color>
+    <color name="p_unavailable">#C62828</color>
+</resources>
