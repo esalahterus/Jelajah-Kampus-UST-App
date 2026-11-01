@@ -29,20 +29,6 @@ android {
                 "\"http://10.0.2.2/jelajah-kampus-ust/\""
             )
         }
-
-        release {
-            isMinifyEnabled = false
-
-            // Release tidak boleh mengizinkan HTTP biasa.
-            manifestPlaceholders["usesCleartextTraffic"] = "false"
-
-            // Ganti dengan alamat HTTPS server produksi sebelum membuat APK release.
-            buildConfigField(
-                "String",
-                "BASE_URL",
-                "\"https://ganti-domain-anda.example/jelajah-kampus-ust/\""
-            )
-        }
     }
 
     compileOptions {

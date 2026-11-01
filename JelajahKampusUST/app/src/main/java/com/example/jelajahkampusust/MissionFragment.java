@@ -24,7 +24,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/** FR-04: daftar misi eksplorasi dengan status, loading, data kosong, dan tombol Coba Lagi. */
 public class MissionFragment extends Fragment {
 
     private final List<Models.Mission> missions = new ArrayList<>();

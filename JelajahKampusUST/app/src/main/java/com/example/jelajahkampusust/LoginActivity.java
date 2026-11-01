@@ -17,7 +17,6 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONObject;
 
-/** FR-02: login. Jika sudah login langsung ke beranda. */
 public class LoginActivity extends AppCompatActivity {
 
     private TextInputEditText etEmail, etPassword;

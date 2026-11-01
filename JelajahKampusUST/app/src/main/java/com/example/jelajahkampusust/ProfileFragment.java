@@ -16,7 +16,6 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 
-/** Profil mahasiswa: identitas, jumlah misi selesai, riwayat misi, dan logout. */
 public class ProfileFragment extends Fragment {
 
     private TextView tvName, tvNim, tvProdi, tvSummary, tvError;

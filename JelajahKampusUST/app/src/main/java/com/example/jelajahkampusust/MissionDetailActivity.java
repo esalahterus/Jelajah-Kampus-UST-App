@@ -32,10 +32,6 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Detail misi: informasi, mulai sesi (GPS), ambil foto (kamera, resolusi penuh via FileProvider),
- * kirim bukti ke server, dan akhiri sesi. Alur sesuai Use Case 1 & 2 pada PRD.
- */
 public class MissionDetailActivity extends AppCompatActivity {
 
     private int missionId;
@@ -200,7 +196,6 @@ public class MissionDetailActivity extends AppCompatActivity {
         stateBox.setVisibility(View.VISIBLE);
     }
 
-    /** Samakan sesi lokal dengan keadaan server. */
     private void syncSession() {
         if (mission.activeSessionId > 0) {
             if (session.getActiveSessionId() != mission.activeSessionId)
@@ -315,7 +310,6 @@ public class MissionDetailActivity extends AppCompatActivity {
         });
     }
 
-    /** A2 (use case 2): GPS tidak aktif -> minta pengguna mengaktifkan. */
     private void checkGpsEnabled() {
         if (!JelajahApp.tracking.isLocationEnabled()) {
             new AlertDialog.Builder(this)

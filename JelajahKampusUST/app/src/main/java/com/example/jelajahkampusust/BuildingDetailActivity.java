@@ -26,10 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Detail gedung (FR-06, FR-10..12): info teks, fasilitas, panduan audio (MediaPlayer)
- * dan video (VideoView + MediaController). Media dikelola sesuai lifecycle (MP-03P).
- */
 public class BuildingDetailActivity extends AppCompatActivity {
 
     private int buildingId;

@@ -12,7 +12,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Model data hasil parsing JSON dari API. */
 public final class Models {
     private Models() {}
 

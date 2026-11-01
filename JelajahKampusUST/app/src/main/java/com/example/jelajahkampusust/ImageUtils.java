@@ -19,7 +19,6 @@ import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Utilitas gambar: kompres foto sebelum upload dan muat gambar dari URL (tanpa library eksternal). */
 public final class ImageUtils {
     private ImageUtils() {}
 
@@ -30,7 +29,6 @@ public final class ImageUtils {
         @Override protected int sizeOf(String key, Bitmap value) { return value.getByteCount() / 1024; }
     };
 
-    /** Perkecil (maks 1600 px), koreksi rotasi EXIF, simpan sebagai JPEG kualitas 85. */
     public static File compressForUpload(File src, File outDir) throws IOException {
         BitmapFactory.Options bounds = new BitmapFactory.Options();
         bounds.inJustDecodeBounds = true;
@@ -73,7 +71,6 @@ public final class ImageUtils {
         return out;
     }
 
-    /** Decode file lokal dengan ukuran terkecil yang cukup untuk tampilan (hemat memori). */
     public static Bitmap decodeScaled(File f, int targetPx) {
         BitmapFactory.Options b = new BitmapFactory.Options();
         b.inJustDecodeBounds = true;
@@ -101,7 +98,6 @@ public final class ImageUtils {
         return bmp;
     }
 
-    /** Muat gambar dari URL ke ImageView (cache memori, decode terkecil). */
     public static void load(String url, ImageView view) {
         if (url == null || url.isEmpty()) { view.setImageDrawable(null); return; }
         view.setTag(url);

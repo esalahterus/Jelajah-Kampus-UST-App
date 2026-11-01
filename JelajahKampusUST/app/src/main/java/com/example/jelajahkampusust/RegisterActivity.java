@@ -17,7 +17,6 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONObject;
 
-/** FR-01: registrasi akun mahasiswa. */
 public class RegisterActivity extends AppCompatActivity {
 
     private TextInputEditText etName, etNim, etProdi, etEmail, etPassword;

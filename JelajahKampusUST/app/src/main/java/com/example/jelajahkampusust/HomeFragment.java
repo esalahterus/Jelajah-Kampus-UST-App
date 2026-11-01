@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 
 import org.json.JSONObject;
 
-/** FR-03: beranda berisi sapaan, ringkasan progres, dan misi yang sedang berlangsung. */
 public class HomeFragment extends Fragment {
 
     private TextView tvGreeting, tvProgress, tvStats, tvActive, tvError;

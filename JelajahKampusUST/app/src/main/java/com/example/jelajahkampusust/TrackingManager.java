@@ -17,11 +17,6 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-/**
- * Pelacakan lokasi selama sesi eksplorasi (MP-05P + PRD 6.7).
- * - Hanya aktif jika ada sesi eksplorasi aktif DAN izin lokasi diberikan (BR-07, NFR-05).
- * - Dijeda otomatis saat aplikasi tidak tampil (lifecycle, NFR-10).
- */
 public class TrackingManager {
 
     public interface Listener {
@@ -68,13 +63,11 @@ public class TrackingManager {
         resume();
     }
 
-    /** Dipanggil saat sesi berakhir (BR-10): hentikan pembaruan lokasi. */
     public void stopSession() {
         session.clearActiveSession();
         pause();
     }
 
-    /** Mulai ulang pembaruan, misalnya setelah izin lokasi diberikan. */
     public void resume() {
         if (updating || startedActivities == 0 || !session.hasActiveSession() || !hasPermission() || lm == null) return;
         try {

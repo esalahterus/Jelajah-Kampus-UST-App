@@ -3,7 +3,6 @@ package com.example.jelajahkampusust;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/** Menyimpan token login, profil ringkas, dan sesi eksplorasi aktif. */
 public class SessionManager {
     private static final String PREF = "jelajah_session";
     private final SharedPreferences sp;

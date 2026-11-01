@@ -38,10 +38,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
-/**
- * Peta kampus (MP-04P + MP-05P): marker gedung, lokasi pengguna, dan peserta sesi aktif.
- * Sumber tile: OpenStreetMap (MAPNIK), user agent = package aplikasi.
- */
 public class MapFragment extends Fragment implements TrackingManager.Listener {
 
     private static final GeoPoint DEFAULT_CENTER = new GeoPoint(-7.8060, 110.3925);
@@ -217,7 +213,6 @@ public class MapFragment extends Fragment implements TrackingManager.Listener {
         map.invalidate();
     }
 
-    /** Dipanggil dari MainActivity.showMapAt(): fokus ke gedung dan tampilkan infonya. */
     public void focusBuilding(int buildingId) {
         pendingFocusBuildingId = buildingId;
         if (map == null) return;
@@ -346,7 +341,7 @@ public class MapFragment extends Fragment implements TrackingManager.Listener {
                         } catch (Exception ignored) { }
                     }
 
-                    @Override public void onError(String message) { /* biarkan marker terakhir */ }
+                    @Override public void onError(String message) {}
                 });
     }
 

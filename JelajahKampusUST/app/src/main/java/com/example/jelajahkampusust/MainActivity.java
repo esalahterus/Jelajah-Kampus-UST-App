@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-/** MP-01P: satu Activity sebagai host, navigasi Beranda / Misi / Peta / Profil berbasis Fragment. */
 public class MainActivity extends AppCompatActivity {
 
     private static final String[] TAGS = {"home", "missions", "map", "profile"};
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("tab", currentIndex);
     }
 
-    /** Tampilkan fragment pada indeks tertentu (hide/show agar state peta tetap terjaga). */
     private void show(int index) {
         currentIndex = index;
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
@@ -80,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setSelectedItemId(IDS[index]);
     }
 
-    /** Dipanggil dari detail misi: buka tab peta dan fokus ke gedung tujuan. */
     public void showMapAt(int buildingId) {
         goToTab(2);
         getSupportFragmentManager().executePendingTransactions();

@@ -11,7 +11,6 @@ import java.io.File;
 
 public class JelajahApp extends Application implements Application.ActivityLifecycleCallbacks {
 
-    /** Pengelola pelacakan lokasi tunggal untuk seluruh aplikasi. */
     public static TrackingManager tracking;
 
     @Override

@@ -25,10 +25,6 @@ import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Klien HTTP sederhana (HttpURLConnection) untuk API PHP/JSON.
- * Callback selalu dipanggil di main thread.
- */
 public class ApiClient {
 
     public interface Callback {
@@ -58,7 +54,6 @@ public class ApiClient {
         run("POST", Config.API + endpoint, params, null, null, cb);
     }
 
-    /** Unggah satu file (field "photo") beserta parameter teks. */
     public void upload(String endpoint, Map<String, String> params, File file, Callback cb) {
         run("POST", Config.API + endpoint, params, "photo", file, cb);
     }
