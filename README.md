@@ -1,6 +1,6 @@
 # Jelajah Kampus UST App
 
-Aplikasi eksplorasi kampus UST berbasis Android (Java) dengan backend PHP/MySQL (Laragon) dan peta OpenStreetMap (osmdroid).
+Aplikasi eksplorasi kampus UST berbasis Android (Java) dengan backend PHP/MySQL dan peta OpenStreetMap (osmdroid).
 
 ```
 Jelajah-Kampus-UST-App/
